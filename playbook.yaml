@@ -1,0 +1,9 @@
+---
+- name: Init playbook
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Set playbook facts
+      ansible.builtin.set_fact:
+        username: foo
+        password: baz-123
