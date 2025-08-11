@@ -13,3 +13,5 @@
         path: /tmp/dummy-creds
         regexp: '^USER='
         line: "USER={{username}}:{{password}}"
+        create: true
+        state: present
