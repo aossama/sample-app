@@ -7,3 +7,9 @@
       ansible.builtin.set_fact:
         username: foo
         password: baz-123
+    
+    - name: Ensure creds file exist
+      ansible.builtin.lineinfile:
+        path: /tmp/dummy-creds
+        regexp: '^USER='
+        line: "USER={{username}}:{{password}}"
